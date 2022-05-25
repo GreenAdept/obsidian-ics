@@ -7,8 +7,15 @@ export function filterMatchingEvents(icsArray: any[], dayToMatch: string) {
 
 	// find non-recurring events on the day
 	icsArray.map((e) => {
-		if (moment(e.start).isSame(dayToMatch, "day")) {
-			matchingEvents.push(e);
+		if (e.uid.contains("todoist") {
+			if (moment(e.start).isSameOrBefore(dayToMatch, "day")) {
+				matchingEvents.push(e);
+			}
+	}
+		else {
+			if (moment(e.start).isSameOrBefore(dayToMatch, "day")) {
+				matchingEvents.push(e);
+	}
 		}
 	});
 
